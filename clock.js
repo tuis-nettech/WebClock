@@ -29,20 +29,13 @@ var time4string;
 var time5string;
 var time6string;
 
-function clock() {
+function time() {
     'use strict'
     var now = new Date();
-    var y = now.getFullYear() + '';
-    var mo = now.getMonth() + 1 + '';
-    var d = now.getDate() + '';
     var h = now.getHours() + '';
     var mi = now.getMinutes() + '';
     var s = now.getSeconds() + '';
 
-    if (mo < 10)
-        mo = '0' + mo;
-    if (d < 10)
-        d = '0' + d;
     if (h < 10)
         h = '0' + h;
     if (mi < 10)
@@ -50,20 +43,6 @@ function clock() {
     if (s < 10)
         s = '0' + s;
 
-    var year = {
-        'y0': y.substring(0, 1),
-        'y1': y.substring(1, 2),
-        'y2': y.substring(2, 3),
-        'y3': y.substring(3, 4)
-    };
-    var monts = {
-        'mo0': mo.substring(0, 1),
-        'mo1': mo.substring(1, 2)
-    };
-    var day = {
-        'd0': d.substring(0, 1),
-        'd1': d.substring(1, 2)
-    };
     var hour = {
         'h0': h.substring(0, 1),
         'h1': h.substring(1, 2)
@@ -91,6 +70,45 @@ function clock() {
     time5string = tarr5.join('');
     var tarr6 = [echodigit(6, hour.h0), ' ', echodigit(6, hour.h1), ' ', echodigit(6, 10), ' ', echodigit(6, minute.mi0), ' ', echodigit(6, minute.mi1), ' ', echodigit(6, 10), ' ', echodigit(6, second.s0), ' ', echodigit(6, second.s1)];
     time6string = tarr6.join('');
+
+    document.getElementById('time0').innerHTML = time0string;
+    document.getElementById('time1').innerHTML = time1string;
+    document.getElementById('time2').innerHTML = time2string;
+    document.getElementById('time3').innerHTML = time3string;
+    document.getElementById('time4').innerHTML = time4string;
+    document.getElementById('time5').innerHTML = time5string;
+    document.getElementById('time6').innerHTML = time6string;
+    document.getElementById('hms').innerHTML = hour.h0 + '' + hour.h1 + '' + minute.mi0 + '' + minute.mi1 + '' + second.s0 + '' + second.s1;
+}
+
+function date() {
+
+    var now = new Date();
+    var y = now.getFullYear() + '';
+    var mo = now.getMonth() + 1 + '';
+    var d = now.getDate() + '';
+    var h = now.getHours() + '';
+
+    if (mo < 10)
+        mo = '0' + mo;
+    if (d < 10)
+        d = '0' + d;
+
+    var year = {
+        'y0': y.substring(0, 1),
+        'y1': y.substring(1, 2),
+        'y2': y.substring(2, 3),
+        'y3': y.substring(3, 4)
+    };
+    var monts = {
+        'mo0': mo.substring(0, 1),
+        'mo1': mo.substring(1, 2)
+    };
+    var day = {
+        'd0': d.substring(0, 1),
+        'd1': d.substring(1, 2)
+    };
+
     var darr0 = [echodigit(0, year.y0), ' ', echodigit(0, year.y1), ' ', echodigit(0, year.y2), ' ', echodigit(0, year.y3), echodigit(0, 11), echodigit(0, monts.mo0), ' ', echodigit(0, monts.mo1), echodigit(0, 11), echodigit(0, day.d0), ' ', echodigit(0, day.d1)];
     date0string = darr0.join('');
     var darr1 = [echodigit(1, year.y0), ' ', echodigit(1, year.y1), ' ', echodigit(1, year.y2), ' ', echodigit(1, year.y3), echodigit(1, 11), echodigit(1, monts.mo0), ' ', echodigit(1, monts.mo1), echodigit(1, 11), echodigit(1, day.d0), ' ', echodigit(1, day.d1)];
@@ -105,15 +123,6 @@ function clock() {
     date5string = darr5.join('');
     var darr6 = [echodigit(6, year.y0), ' ', echodigit(6, year.y1), ' ', echodigit(6, year.y2), ' ', echodigit(6, year.y3), echodigit(6, 11), echodigit(6, monts.mo0), ' ', echodigit(6, monts.mo1), echodigit(6, 11), echodigit(6, day.d0), ' ', echodigit(6, day.d1)];
     date6string = darr6.join('');
-
-    document.getElementById('time0').innerHTML = time0string;
-    document.getElementById('time1').innerHTML = time1string;
-    document.getElementById('time2').innerHTML = time2string;
-    document.getElementById('time3').innerHTML = time3string;
-    document.getElementById('time4').innerHTML = time4string;
-    document.getElementById('time5').innerHTML = time5string;
-    document.getElementById('time6').innerHTML = time6string;
-    document.getElementById('hms').innerHTML = hour.h0 + '' + hour.h1 + '' + minute.mi0 + '' + minute.mi1 + '' + second.s0 + '' + second.s1;
 
     document.getElementById('date0').innerHTML = date0string;
     document.getElementById('date1').innerHTML = date1string;
@@ -143,5 +152,11 @@ function fontSize() {
     document.getElementById('date5').style.fontSize = y + 'px';
     document.getElementById('date6').style.fontSize = y + 'px';
 }
-setInterval(clock, 1000);
+document.addEventListener("DOMContentLoaded", function() {
+    time();
+    date();
+});
+
+setInterval(time, 1000);
+setInterval(date, 86400);
 setInterval(fontSize, 10);
