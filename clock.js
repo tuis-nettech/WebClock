@@ -90,19 +90,19 @@ function clock() {
     time5string = tarr5.join('');
     var tarr6 = [echodigit(6, hour.h0), ' ', echodigit(6, hour.h1), ' ', echodigit(6, 10), ' ', echodigit(6, minute.mi0), ' ', echodigit(6, minute.mi1), ' ', echodigit(6, 10), ' ', echodigit(6, second.s0), ' ', echodigit(6, second.s1)];
     time6string = tarr6.join('');
-    var darr0 = [echodigit(0, year.y0), ' ', echodigit(0, year.y1), ' ', echodigit(year.y2, 0), ' ', echodigit(year.y3, 0), echodigit(0, 11), echodigit(monts.mo0, 0), ' ', echodigit(monts.mo1, 0), echodigit(11, 0), echodigit(day.d0, 0), ' ', echodigit(day.d1, 0)];
+    var darr0 = [echodigit(0, year.y0), ' ', echodigit(0, year.y1), ' ', echodigit(0, year.y2), ' ', echodigit(0, year.y3), echodigit(0, 11), echodigit(0, monts.mo0), ' ', echodigit(0, monts.mo1), echodigit(11, 0), echodigit(0, day.d0), ' ', echodigit(0, day.d1)];
     date0string = darr0.join('');
-    var darr1 = [echodigit(1, year.y0), ' ', echodigit(1, year.y1), ' ', echodigit(year.y2, 1), ' ', echodigit(year.y3, 1), echodigit(1, 11), echodigit(monts.mo0, 1), ' ', echodigit(monts.mo1, 1), echodigit(11, 1), echodigit(day.d0, 1), ' ', echodigit(day.d1, 1)];
+    var darr1 = [echodigit(1, year.y0), ' ', echodigit(1, year.y1), ' ', echodigit(1, year.y2), ' ', echodigit(1, year.y3), echodigit(1, 11), echodigit(1, monts.mo0), ' ', echodigit(1, monts.mo1), echodigit(11, 1), echodigit(1, day.d0), ' ', echodigit(1, day.d1)];
     date1string = darr1.join('');
-    var darr2 = [echodigit(2, year.y0), ' ', echodigit(2, year.y1), ' ', echodigit(year.y2, 2), ' ', echodigit(year.y3, 2), echodigit(2, 11), echodigit(monts.mo0, 2), ' ', echodigit(monts.mo1, 2), echodigit(11, 2), echodigit(day.d0, 2), ' ', echodigit(day.d1, 2)];
+    var darr2 = [echodigit(2, year.y0), ' ', echodigit(2, year.y1), ' ', echodigit(2, year.y2), ' ', echodigit(2, year.y3), echodigit(2, 11), echodigit(2, monts.mo0), ' ', echodigit(2, monts.mo1), echodigit(11, 2), echodigit(2, day.d0), ' ', echodigit(2, day.d1)];
     date2string = darr2.join('');
-    var darr3 = [echodigit(3, year.y0), ' ', echodigit(3, year.y1), ' ', echodigit(year.y2, 3), ' ', echodigit(year.y3, 3), echodigit(3, 11), echodigit(monts.mo0, 3), ' ', echodigit(monts.mo1, 3), echodigit(11, 3), echodigit(day.d0, 3), ' ', echodigit(day.d1, 3)];
+    var darr3 = [echodigit(3, year.y0), ' ', echodigit(3, year.y1), ' ', echodigit(3, year.y2), ' ', echodigit(3, year.y3), echodigit(3, 11), echodigit(3, monts.mo0), ' ', echodigit(3, monts.mo1), echodigit(11, 3), echodigit(3, day.d0), ' ', echodigit(3, day.d1)];
     date3string = darr3.join('');
-    var darr4 = [echodigit(4, year.y0), ' ', echodigit(4, year.y1), ' ', echodigit(year.y2, 4), ' ', echodigit(year.y3, 4), echodigit(4, 11), echodigit(monts.mo0, 4), ' ', echodigit(monts.mo1, 4), echodigit(11, 4), echodigit(day.d0, 4), ' ', echodigit(day.d1, 4)];
+    var darr4 = [echodigit(4, year.y0), ' ', echodigit(4, year.y1), ' ', echodigit(4, year.y2), ' ', echodigit(4, year.y3), echodigit(4, 11), echodigit(4, monts.mo0), ' ', echodigit(4, monts.mo1), echodigit(11, 4), echodigit(4, day.d0), ' ', echodigit(4, day.d1)];
     date4string = darr4.join('');
-    var darr5 = [echodigit(5, year.y0), ' ', echodigit(5, year.y1), ' ', echodigit(year.y2, 5), ' ', echodigit(year.y3, 5), echodigit(5, 11), echodigit(monts.mo0, 5), ' ', echodigit(monts.mo1, 5), echodigit(11, 5), echodigit(day.d0, 5), ' ', echodigit(day.d1, 5)];
+    var darr5 = [echodigit(5, year.y0), ' ', echodigit(5, year.y1), ' ', echodigit(5, year.y2), ' ', echodigit(5, year.y3), echodigit(5, 11), echodigit(5, monts.mo0), ' ', echodigit(5, monts.mo1), echodigit(11, 5), echodigit(5, day.d0), ' ', echodigit(5, day.d1)];
     date5string = darr5.join('');
-    var darr6 = [echodigit(6, year.y0), ' ', echodigit(6, year.y1), ' ', echodigit(year.y2, 6), ' ', echodigit(year.y3, 6), echodigit(6, 11), echodigit(monts.mo0, 6), ' ', echodigit(monts.mo1, 6), echodigit(11, 6), echodigit(day.d0, 6), ' ', echodigit(day.d1, 6)];
+    var darr6 = [echodigit(6, year.y0), ' ', echodigit(6, year.y1), ' ', echodigit(6, year.y2), ' ', echodigit(6, year.y3), echodigit(6, 11), echodigit(6, monts.mo0), ' ', echodigit(6, monts.mo1), echodigit(11, 6), echodigit(6, day.d0), ' ', echodigit(6, day.d1)];
     date6string = darr6.join('');
 
     document.getElementById('time0').innerHTML = time0string;
