@@ -2,56 +2,56 @@
 <html>
   <head>
     <meta charset="utf-8">
-	<style>
-	* {
-    box-sizing: border-box;
-    }
+      <style>
+        body {
+          background-color: black;
+          color: white;
+        }
 
-    body {
-	  background-color: black;
-    color: white;}
+        .clock {
+          display: inline;
+          text-align: center
+        }
 
-	.clock {
-    display: inline;
-    text-align:center}
+        div.clock {
+          font-family: DejaVuMono;
+        }
 
-	pre {
-    margin: 0;
-    font-family: Monospace;
-	 /* font-size: 30px*/;}
+        pre {
+          margin: 0px;
+        }
 
-	</style>
-	<script src="clock.js"></script>
-
-
+        @font-face {
+          font-family: DejaVuMono;
+          src: url('img/DejaVuSansMono.ttf') format('ttf');
+        }
+      </style>
+      <script src="clock.js"></script>
   </head>
-
   <body>
-  <div class="clock">
-  <pre id="date0"></pre>
-  <pre id="date1"></pre>
-  <pre id="date2"></pre>
-  <pre id="date3"></pre>
-  <pre id="date4"></pre>
-  <pre id="date5"></pre>
-  <pre id="date6"></pre>
-  <br>
-  <pre id="time0"></pre>
-  <pre id="time1"></pre>
-  <pre id="time2"></pre>
-  <pre id="time3"></pre>
-  <pre id="time4"></pre>
-  <pre id="time5"></pre>
-  <pre id="time6"></pre>
-  </div>
-  <br>
-  <p id = "ymd"></p>
-  <p id = "hms"></p>
-
-  <p>What's new?<br>
-
-  ver 1.02 - support adaptive digit size<br>
-  ver 1.01 - support 00:00<p>
+    <div class="clock">
+      <br>
+      <pre id="time0"></pre>
+      <pre id="time1"></pre>
+      <pre id="time2"></pre>
+      <pre id="time3"></pre>
+      <pre id="time4"></pre>
+      <pre id="time5"></pre>
+      <pre id="time6"></pre>
+      <br>
+      <pre id="date0"></pre>
+      <pre id="date1"></pre>
+      <pre id="date2"></pre>
+      <pre id="date3"></pre>
+      <pre id="date4"></pre>
+      <pre id="date5"></pre>
+      <pre id="date6"></pre>
+    </div>
+    <p id="ymd"></p>
+    <p id="hms"></p>
+    <p>
+      What's new?<br>
+      ver 1.03 - cleanup the code<br>ver 1.02 - support adaptive digit size<br>ver 1.01 - support 00:00
+    </p>
   </body>
-
 </html>
